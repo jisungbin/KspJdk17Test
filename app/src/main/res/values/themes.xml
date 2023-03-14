@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.KspJdk17Test" parent="android:Theme.Material.NoActionBar" />
+</resources>

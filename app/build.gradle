@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp' version '1.8.10-1.0.9'
+}
+
+android {
+    namespace 'land.sungbin.kspjdk17test'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "land.sungbin.kspjdk17test"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlin {
+        jvmToolchain(17)
+    }
+}
+
+dependencies {
+    ksp project(':KspProcessor')
+}
